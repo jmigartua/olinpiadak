@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <style>html{ scroll-behavior: smooth; }</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&amp;family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <!-- KaTeX auto-render: publication titles carry TeX inside generated HTML that
      Quarto's own math pipeline never sees (same approach as thermomat). -->
 <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
@@ -86,6 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <link rel="stylesheet" href="../assets/styles/theme.css">
 <link rel="stylesheet" href="../assets/styles/site.css">
+<link rel="stylesheet" href="../assets/styles/face.css">
 <link rel="stylesheet" href="../assets/styles/project.css">
 </head>
 
@@ -294,6 +295,54 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
   </div>
 </footer>
+<!-- TheThird face: the editions matrix shows a test's record on hover (F97); the problem bank filters by topic
+     and year, groups by topic, year or title, and shows a grid or a list (F52 F83 F59 F60 F84). Pure DOM, no library;
+     without script the bank is already grouped by topic and the matrix links work. -->
+<script>
+(function () {
+  /* ---- TheThird's behaviour: the matrix record on hover (F97), the bank's chips, indexes and views (F52 F83 F59 F60 F84) */
+  var tip = document.querySelector('.tm-tip');
+  if (tip) {
+    document.querySelectorAll('.tm-obj').forEach(function (a) {
+      function show() { var rec = JSON.parse(a.getAttribute('data-rec')); var lead = a.getAttribute('data-lead');
+        tip.innerHTML = Object.keys(rec).map(function (k) { return '<div><dt>' + k + '</dt><dd>' + rec[k] + '</dd></div>'; }).join('') + (lead ? '<p>' + lead + '</p>' : '');
+        var r = a.getBoundingClientRect(), w = document.querySelector('.tmatrix-wrap').getBoundingClientRect();
+        tip.hidden = false; tip.style.top = (r.top - w.top) + 'px'; tip.style.left = Math.min(r.right - w.left + 12, w.width - 340) + 'px'; }
+      a.addEventListener('mouseenter', show); a.addEventListener('focus', show);
+      a.addEventListener('mouseleave', function () { tip.hidden = true; }); a.addEventListener('blur', function () { tip.hidden = true; });
+      a.addEventListener('click', function (e) { e.preventDefault(); show(); });
+    });
+  }
+  var bank = document.querySelector('.bank');
+  if (bank) {
+    var meta = JSON.parse(bank.getAttribute('data-meta')), tn = {}; meta.topics.forEach(function (t) { tn[t[0]] = t[1]; });
+    var cards = Array.prototype.slice.call(bank.querySelectorAll('.pc')), topic = '', year = '', index = 'topic', view = 'grid';
+    var groups = bank.querySelector('#bk-groups'), cardsBox = bank.querySelector('#bk-cards');
+    function render() {
+      var vis = cards.filter(function (c) { return (!topic || c.getAttribute('data-topics').split(' ').indexOf(topic) >= 0) && (!year || c.getAttribute('data-year') === year); });
+      bank.querySelector('#bk-n').textContent = vis.length;
+      bank.querySelector('#bk-what').textContent = (topic ? tn[topic] : 'todos los temas') + ', ' + (year ? year : 'todos los años');
+      var keyOf = { topic: function (c) { return c.getAttribute('data-ptopic'); }, year: function (c) { return c.getAttribute('data-year'); }, title: function (c) { return c.getAttribute('data-key').charAt(0).toUpperCase(); } }[index];
+      var label = { topic: function (k) { return tn[k]; }, year: function (k) { return k; }, title: function (k) { return k; } }[index];
+      var order = index === 'topic' ? meta.topics.map(function (t) { return t[0]; }) : null;
+      var by = {}; vis.forEach(function (c) { var k = keyOf(c); (by[k] = by[k] || []).push(c); });
+      var keys = Object.keys(by); if (order) keys.sort(function (a, b) { return order.indexOf(a) - order.indexOf(b); }); else if (index === 'year') keys.sort().reverse(); else keys.sort();
+      if (index === 'title') vis.sort(function (a, b) { return a.getAttribute('data-key') < b.getAttribute('data-key') ? -1 : 1; });
+      groups.innerHTML = ''; cardsBox.innerHTML = '';
+      keys.forEach(function (k) {
+        var h = document.createElement('h2'); h.className = 'bk-h'; h.innerHTML = label(k) + ' <span class="whose">' + by[k].length + '</span>'; groups.appendChild(h);
+        var g = document.createElement('div'); g.className = 'ocards bk-cards' + (view === 'list' ? ' as-list' : ''); by[k].forEach(function (c) { g.appendChild(c); }); groups.appendChild(g);
+      });
+    }
+    bank.querySelectorAll('.bk-chips').forEach(function (row) { row.querySelectorAll('.chip-f').forEach(function (b) { b.addEventListener('click', function () {
+      var v = b.getAttribute('data-v'); if (row.getAttribute('data-filter') === 'topic') topic = v; else year = v;
+      row.querySelectorAll('.chip-f').forEach(function (x) { x.setAttribute('aria-pressed', x === b); }); render(); }); }); });
+    bank.querySelectorAll('[data-index]').forEach(function (b) { b.addEventListener('click', function () { index = b.getAttribute('data-index'); bank.querySelectorAll('[data-index]').forEach(function (x) { x.setAttribute('aria-pressed', x === b); }); render(); }); });
+    bank.querySelectorAll('[data-view]').forEach(function (b) { b.addEventListener('click', function () { view = b.getAttribute('data-view'); bank.querySelectorAll('[data-view]').forEach(function (x) { x.setAttribute('aria-pressed', x === b); }); render(); }); });
+    render();
+  }
+})();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

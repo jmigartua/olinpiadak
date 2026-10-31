@@ -1,18 +1,18 @@
-/* Olinpiadak — rules of this project only; theme.css and site.css are the family kit, copied unchanged (L002).
-   Identity: petrol teal #0b6e72 as the primary (the kit names its primary token --teal for history; this is the
-   first project where it is one) and medal gold #a5780f as the accent. No other kit project uses either. */
+/* Olinpiadak — rules of this project only. The face is TheThird (theme.css + site.css = Azala, face.css = the
+   catalogue; L010–L012); the kit names its primary token --teal for history. Identity: medal bronze #6e4a2a as the
+   primary and medal gold #b8860b as the accent (D11, L011). No other kit project uses either. */
 :root {
-  --teal: #0b6e72; --teal-soft: #2a8d90; --amber: #a5780f;
+  --teal: #6e4a2a; --teal-soft: #8a6240; --amber: #b8860b;
   --ok: #2e6b4e; --warn: #8a6a00; --bad: #9a3f3f;
   --gold-tint: #fbf6e9;
-  --fl-teorica: #0b6e72; --fl-experimental: #a5780f; --fl-heredada: #6b6f76;
+  --fl-teorica: #6e4a2a; --fl-experimental: #b8860b; --fl-heredada: #6b6f76;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --teal: #5fc3c6; --teal-soft: #8fd6d8; --amber: #e2b84a;
+    --teal: #d9a877; --teal-soft: #e6c19a; --amber: #e3b94a;
     --ok: #7fc4a3; --warn: #e3c15a; --bad: #e08a8a;
     --gold-tint: #2a2414;
-    --fl-teorica: #5fc3c6; --fl-experimental: #e2b84a; --fl-heredada: #a3a8b0;
+    --fl-teorica: #d9a877; --fl-experimental: #e3b94a; --fl-heredada: #a3a8b0;
   }
 }
 
