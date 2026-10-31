@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Prueba teórica 2025 · Olinpiadak – Olimpiada de Física · Fase local del País Vasco</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<link href="../../../assets/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-html-afe927e19676d0e50b1726048be49fb1.min.css" rel="stylesheet" append-hash="true" data-mode="light">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<style>html{ scroll-behavior: smooth; }</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<!-- KaTeX auto-render: publication titles carry TeX inside generated HTML that
+     Quarto's own math pipeline never sees (same approach as thermomat). -->
+<script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script>
+/* The header ribbon is sticky; the side columns and anchor targets need its height. */
+(function () {
+  function headH() {
+    var t = document.querySelector(".topline"), h = document.querySelector(".site-head");
+    var px = (t ? t.offsetHeight : 0) + (h ? h.offsetHeight : 0);
+    if (px) document.documentElement.style.setProperty("--head-h", px + "px");
+  }
+  document.addEventListener("DOMContentLoaded", headH);
+  window.addEventListener("load", headH);
+  window.addEventListener("resize", headH);
+})();
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.renderMathInElement) {
+    renderMathInElement(document.body, {
+      delimiters: [{ left: "$$", right: "$$", display: true }, { left: "$", right: "$", display: false }, { left: "\\(", right: "\\)", display: false }],
+      throwOnError: false
+    });
+  }
+  /* Quarto's KaTeX pipeline writes <span class="math inline">TeX</span> without delimiters and renders
+     them in a loop that reads firstChild.data; that loop dies at the first span the auto-render above
+     has already turned into KaTeX markup, leaving every later formula raw. Render the rest here. */
+  if (window.katex) {
+    document.querySelectorAll(".math").forEach(function (el) {
+      if (!el.querySelector(".katex")) {
+        var t = el.textContent.replace(/^\s*\\[\(\[]/, "").replace(/\\[\)\]]\s*$/, "");
+        try { katex.render(t, el, { displayMode: el.classList.contains("display"), throwOnError: false }); } catch (e) {}
+      }
+      /* Quarto's loop would still visit this span and wipe it (firstChild is now an element, not text):
+         take it out of its sight. No stylesheet of the site depends on the class; KaTeX's own output carries the layout. */
+      el.classList.remove("math"); el.classList.add("math-done");
+    });
+  }
+});
+</script>
+
+  <script defer="" src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../assets/styles/theme.css">
+<link rel="stylesheet" href="../../../assets/styles/site.css">
+<link rel="stylesheet" href="../../../assets/styles/project.css">
+</head>
+
+<body>
+
+<div class="topline"></div>
+<header class="site-head">
+  <div class="site-head__inner">
+    <a href="../../../index.html" class="wordmark">Olimpiada de Física <span class="accent">Euskadi</span>
+      <span class="wordmark-sub">fase local del País Vasco · Facultad de Ciencia y Tecnología, UPV/EHU · todas las ediciones desde 2012</span>
+    </a>
+    <nav class="site-nav">
+      <a href="../../../index.html">Inicio</a>
+      <a href="../../../ediciones/index.html">Ediciones</a>
+      <a href="../../../problemas/index.html">Problemas</a>
+      <a href="../../../olimpiada/index.html">La olimpiada</a>
+      <a href="../../../historia/index.html">Historia</a>
+      <a href="../../../contacto/index.html">Contacto</a>
+    </nav>
+  </div>
+</header>
+<!-- generated by tools/sibling.py public: the left navigation -->
+<div class="docs">
+<nav class="docs-nav" aria-label="Site sections">
+<button class="docs-fold" type="button" data-fold="nav" aria-label="Hide the navigation" title="Hide the navigation">‹</button>
+<details class="group" open=""><summary class="t">Inicio</summary><ul><li><a href="../../../index.html">Inicio</a></li></ul></details>
+<details class="group" open=""><summary class="t">Ediciones</summary><ul><li><a href="../../../ediciones/index.html">Todas las ediciones</a></li><li><a href="../../../ediciones/2026/index.html">2026 · XXXVII</a></li><li><a href="../../../ediciones/2025/index.html">2025 · XXXVI</a></li><li><a href="../../../ediciones/2024/index.html">2024 · XXXV</a></li><li><a href="../../../ediciones/2023/index.html">2023 · XXXIV</a></li><li><a href="../../../ediciones/2022/index.html">2022 · XXXIII</a></li><li><a href="../../../ediciones/2021/index.html">2021 · XXXII</a></li><li><a href="../../../ediciones/2020/index.html">2020 · XXXI</a></li><li><a href="../../../ediciones/2019/index.html">2019 · XXX</a></li><li><a href="../../../ediciones/2018/index.html">2018 · XXIX</a></li><li><a href="../../../ediciones/2017/index.html">2017 · XXVIII</a></li><li><a href="../../../ediciones/2016/index.html">2016 · XXVII</a></li><li><a href="../../../ediciones/2015/index.html">2015 · XXVI</a></li><li><a href="../../../ediciones/2014/index.html">2014 · XXV</a></li><li><a href="../../../ediciones/2013/index.html">2013 · XXIV</a></li><li><a href="../../../ediciones/2012/index.html">2012 · XXIII</a></li></ul></details>
+<details class="group" open=""><summary class="t">Problemas</summary><ul><li><a href="../../../problemas/index.html">El banco de problemas</a></li></ul></details>
+<details class="group" open=""><summary class="t">La olimpiada</summary><ul><li><a href="../../../olimpiada/index.html">Qué es y cómo funciona</a></li><li><a href="../../../olimpiada/preparacion.html">Cómo prepararla</a></li></ul></details>
+<details class="group" open=""><summary class="t">Historia</summary><ul><li><a href="../../../historia/index.html">Quince años de fase local</a></li></ul></details>
+<details class="group" open=""><summary class="t">Contacto</summary><ul><li><a href="../../../contacto/index.html">Contacto</a></li></ul></details>
+</nav>
+<div class="docs-main">
+
+<header id="title-block-header">
+<h1 class="title">Prueba teórica de 2025</h1>
+
+</header>
+
+
+<div class="page-article"><div class="itin-head teorica"><span class="kicker">Edición XXXVI · 2025 · Prueba teórica</span><h1>Prueba teórica de 2025</h1><p class="lead">Sobrevivir en órbita y escapar de un planeta (con el diseño de una medida de g), tres cargas, una cuerda sobre el borde de una mesa, esferas de aluminio y de hierro en una balanza dentro del agua, y una red de resistencias. La primera prueba en tres campus a la vez; la inscripción, del 6 de noviembre al 13 de diciembre de 2024, en la web de la sección local.</p></div><nav class="prac-prevnext"><a href="../../2024/experimental/index.html">← 2024 experimental</a><a href="../index.html">Edición 2025</a><a href="../../2025/experimental/index.html">2025 experimental →</a></nav><div class="test-meta"><div><span class="lbl">Fecha</span><span class="v">13 de diciembre de 2024 · 15:00</span></div><div><span class="lbl">Lugar</span><span class="v">Facultad de Ciencia y Tecnología (Leioa), Escuela de Ingeniería de Gipuzkoa (Donostia) y Facultad de Farmacia (Vitoria-Gasteiz), a la vez</span></div><div><span class="lbl">Formato</span><span class="v">5 problemas</span></div><div><span class="lbl">Puntos</span><span class="v">— + 25 + 15 + 20 + 15</span></div><div><span class="lbl">Autoría</span><span class="v">Mikel Sanz</span></div></div><h2 class="anchored">Documentos</h2>
+<table class="docs-table caption-top">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">documento</th>
+<th data-quarto-table-cell-role="th">castellano</th>
+<th data-quarto-table-cell-role="th">euskera</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="r">Enunciado</td>
+<td><span><a href="2025_teorica_enunciado_es.pdf">PDF</a><span class="m">1.2 MB</span></span></td>
+<td><span><a href="2025_teorica_enunciado_eu.pdf">PDF</a><span class="m">1.2 MB</span></span></td>
+</tr>
+</tbody>
+</table>
+<ul class="files"></ul><h2 class="anchored">Cuestiones y problemas</h2><ol class="probs"><li id="2025-T-P1"><span class="k">Problema 1</span><span class="t">Sobrevivir en órbita y escapar del planeta</span><span class="s">Tercera ley de Kepler para acortar un periodo orbital, diseñar una medida de g con objetos cotidianos y la velocidad de escape (≈ 6,6 km/s).</span><span class="tags"><a class="topic-chip" href="../../../problemas/index.html#gravitacion">Gravitación y órbitas</a><a class="topic-chip" href="../../../problemas/index.html#diseno">Diseño de experimentos</a></span></li><li id="2025-T-P2"><span class="k">Problema 2</span><span class="t">Tres cargas</span><span class="pts">25 puntos</span><span class="s">Campo por superposición, campo magnético de las cargas exteriores girando y campo lejano con un desarrollo en serie.</span><span class="tags"><a class="topic-chip" href="../../../problemas/index.html#electrostatica">Electrostática</a><a class="topic-chip" href="../../../problemas/index.html#magnetismo">Magnetismo e inducción</a></span></li><li id="2025-T-P3"><span class="k">Problema 3</span><span class="t">Una cuerda sobre el borde de la mesa</span><span class="pts">15 puntos</span><span class="s">La fracción máxima que puede colgar con rozamiento estático: x/L = μ/(1+μ).</span><span class="tags"><a class="topic-chip" href="../../../problemas/index.html#dinamica">Dinámica y energía</a></span></li><li id="2025-T-P4"><span class="k">Problema 4</span><span class="t">Aluminio y hierro en una balanza</span><span class="pts">20 puntos</span><span class="s">Un kilo de cada en una balanza: en el aire, sumergidos en agua (el empuje la inclina) y el brazo que la equilibra.</span><span class="tags"><a class="topic-chip" href="../../../problemas/index.html#fluidos">Fluidos</a></span></li><li id="2025-T-P5"><span class="k">Problema 5</span><span class="t">Una red de resistencias</span><span class="pts">15 puntos</span><span class="s">Diferencia de potencial entre dos puntos y corriente por una resistencia de una red de cinco.</span><span class="tags"><a class="topic-chip" href="../../../problemas/index.html#circuitos">Circuitos</a></span></li></ol></div>
+<section id="enunciado" class="statement">
+<h2 class="anchored">El enunciado</h2>
+<p>Las respuestas definitivas de cada apartado <strong>deben incluirse en la hoja de respuestas adjunta</strong>. Adicionalmente, justificar y analizar el procedimiento y los resultados en las hojas para cálculos puede resultar muy importante para la corrección de la prueba, ya que pueden otorgarse puntos si el procedimiento y el razonamiento son correctos, a pesar de que pueda haber algún error de cálculo.</p>
+<h3 id="p1" class="anchored">Problema 1 · Sobrevivir en órbita y escapar del planeta</h3>
+<p><span class="pts">25 puntos</span></p>
+<p>Sois dos astronautas que os encontráis en misión alrededor de un planeta llamado Zima. Sin embargo, durante vuestra aventura surgen algunos problemas técnicos que complican vuestra supervivencia. Vuestra misión es resolver estos problemas aplicando principios físicos y cálculos precisos.</p>
+<p>Inicialmente, vuestra misión consiste en permanecer en una órbita circular de radio <span class="math inline">10\,000\,\mathrm{km}</span> durante un tiempo de un año para tomar fotografías científicas. Sin embargo, debido a un contratiempo, llegáis tarde a la órbita, invirtiendo un tiempo extra de 3 meses. Dado que solo disponéis de suministros suficientes para el tiempo total de un año, debéis ajustar la órbita para que os den los suministros para sobrevivir una vuelta entera a Zima y poder volver sanos y salvos a vuestro hogar.</p>
+<p><strong>(a)</strong> Determina el radio <span class="math inline">r_2</span> de la nueva órbita en la que debéis situaros para poder sobrevivir a la travesía dando una vuelta completa a Zima.</p>
+<p>Tras completar la órbita ajustada, vuestro cohete experimenta un fallo técnico en el camino de vuelta. Esto os obliga a aterrizar en la superficie de otro planeta llamado Tek. Para poder escapar, necesitáis conocer la velocidad de escape del planeta. Para obtenerla, decidís empezar a medir la aceleración de la gravedad en la superficie del planeta.</p>
+<p>Disponéis de los objetos mostrados en la figura 1 para realizar la medición.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img src="figuras/fig1.png" class="img-fluid" style="width:75.0%"></p>
+<figcaption>Figura 1. Objetos disponibles para medir la aceleración de la gravedad: cinta métrica (3 metros), lata de atún (250 g), ladrillo, termómetro, linterna, medidor de fuerza*, cuerda y cronómetro. *Un medidor de fuerzas es un instrumento capaz de medir fuerzas aplicadas y que da el resultado en newtons.</figcaption>
+</figure>
+</div>
+<p><strong>(b)</strong> Explica cómo podríais determinar la aceleración de la gravedad utilizando uno o varios de los objetos disponibles. (No es necesario usar todos los objetos; existen varias formas válidas de hacerlo.)</p>
+<p><strong>(c)</strong> Sabiendo que la aceleración de la gravedad de Tek es <span class="math inline">8{,}87\,\mathrm{m/s^2}</span> y asumiendo que es perfectamente esférico con radio <span class="math inline">2\,440\,\mathrm{km}</span>, calcula la velocidad de escape <span class="math inline">v_e</span> que debéis alcanzar para abandonar su superficie.</p>
+<p>(Datos: constante de gravitación universal <span class="math inline">G=6{,}67\times 10^{-11}\,\mathrm{N\,m^2/kg^2}</span>.)</p>
+<h3 id="p2" class="anchored">Problema 2 · Tres cargas</h3>
+<p><span class="pts">25 puntos</span></p>
+<p>Tenemos dos cargas eléctricas estáticas de valor <span class="math inline">q</span> situadas en las posiciones <span class="math inline">(0,0,a/2)</span> y <span class="math inline">(0,0,-a/2)</span>, y otra carga con valor <span class="math inline">-2q</span> en el origen, como muestra la figura 2(a).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img src="figuras/fig2.png" class="img-fluid" style="width:95.0%"></p>
+<figcaption>Figura 2. (a) Dos cargas estáticas de valor <span class="math inline">q</span> están situadas en el eje <span class="math inline">z</span> a una distancia <span class="math inline">a/2</span> del origen, y una carga <span class="math inline">-2q</span> está situada en el origen. Si el vector <span class="math inline">\vec{r}</span> es una posición arbitraria del espacio, se pide calcular <span class="math inline">\vec{E}(r)</span>. (b) Mismo esquema que en (a), pero ahora las cargas <span class="math inline">q</span> están rotando con respecto a la carga <span class="math inline">-2q</span> a velocidad angular constante <span class="math inline">\omega</span> y en el mismo sentido. Se pide calcular el campo magnético <span class="math inline">\vec{B}</span> a lo largo del eje <span class="math inline">y</span>.</figcaption>
+</figure>
+</div>
+<p><strong>(a)</strong> Calcula el campo eléctrico <span class="math inline">\vec{E}(\vec{r})</span> en un punto arbitrario del espacio <span class="math inline">\vec{r}</span> (8 puntos).</p>
+<p><strong>(b)</strong> Supongamos ahora que las dos cargas <span class="math inline">q</span> comienzan a rotar de forma solidaria alrededor de la carga <span class="math inline">-2q</span> con la misma velocidad angular <span class="math inline">\omega</span>, como se indica en la figura 2(b). Calcula el campo magnético <span class="math inline">\vec{B}(\vec{r})</span> en el eje <span class="math inline">y</span>. ¿Cuál es la fuerza total que sufre la carga <span class="math inline">-2q</span>? (8 puntos)</p>
+<p><strong>(c)</strong> Calcula ahora el campo eléctrico efectivo en un punto <span class="math inline">\vec{r}</span> tal que <span class="math inline">|\vec{r}|\gg a</span>. Para un observador en ese punto, las tres cargas están situadas prácticamente en el mismo sitio, así que observa un campo eléctrico efectivo que se denomina <em>campo eléctrico multipolar</em>. Puedes usar la aproximación <span class="math inline">\sqrt{1+\alpha} \approx 1+ \alpha/2</span>, que sirve para cualquier variable <span class="math inline">\alpha</span> tal que <span class="math inline">|\alpha |\ll 1</span>, ya que podemos considerar que las potencias superiores de <span class="math inline">\alpha</span> son mucho menores y, por tanto, despreciables (9 puntos).</p>
+<h3 id="p3" class="anchored">Problema 3 · Una cuerda sobre el borde de la mesa</h3>
+<p><span class="pts">15 puntos</span></p>
+<p>Consideremos una cuerda de longitud <span class="math inline">L</span> y densidad lineal uniforme <span class="math inline">\lambda</span>. La cuerda cuelga parcialmente de una mesa, siendo el coeficiente de rozamiento entre la cuerda y la mesa <span class="math inline">\mu</span>, como se indica en la figura 3. ¿Cuál es la proporción máxima de la cuerda que puede colgar sin que la cuerda se caiga? Justifica tu respuesta (15 puntos).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img src="figuras/fig3.png" class="img-fluid" style="width:55.0%"></p>
+<figcaption>Figura 3. Tenemos una cuerda de longitud total <span class="math inline">L</span> y densidad uniforme <span class="math inline">\lambda</span> que cuelga de una mesa con rozamiento <span class="math inline">\mu</span>. Nos preguntamos por la proporción de la cuerda <span class="math inline">x</span> que puede colgar sin resbalarse.</figcaption>
+</figure>
+</div>
+<h3 id="p4" class="anchored">Problema 4 · Aluminio y hierro en una balanza</h3>
+<p><span class="pts">20 puntos</span></p>
+<p>Supongamos que tenemos dos esferas perfectas, ambas de <span class="math inline">1\,\mathrm{kg}</span> de masa, hechas una de aluminio y otra de hierro. Ambas cuelgan a la misma distancia del fiel, como indica la figura 4(a).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img src="figuras/fig4.png" class="img-fluid" style="width:95.0%"></p>
+<figcaption>Figura 4. (a) Dos esferas perfectas compuestas por <span class="math inline">1\,\mathrm{kg}</span> de hierro y <span class="math inline">1\,\mathrm{kg}</span> de aluminio y colgadas de una balanza a la misma distancia del fiel. (b) Ahora se sumergen en agua y se pide justificar hacia qué lado se inclinará la balanza, si es que se inclina. (c) Si la esfera de hierro está colgada a una distancia <span class="math inline">L=20\,\mathrm{cm}</span> del fiel, nos preguntamos por la distancia <span class="math inline">\alpha L</span> a la que habría que colgar la esfera de aluminio para que la balanza permanezca en equilibrio.</figcaption>
+</figure>
+</div>
+<p><strong>(a)</strong> ¿Hacia qué lado se inclinará la balanza? (3 puntos)</p>
+<p><strong>(b)</strong> ¿Y si sumergimos las esferas en agua, como indica la figura 4(b)? Justifica tus respuestas calculando las fuerzas que sufre cada esfera (7 puntos).</p>
+<p><strong>(c)</strong> En este último caso, si la esfera de hierro está colgada a una distancia <span class="math inline">L=20\,\mathrm{cm}</span> del fiel, ¿cuál sería la distancia a la que habría que colgar la esfera de aluminio para que la balanza permaneciera en equilibrio (ver la figura 4(c))? (10 puntos)</p>
+<p>(Datos: densidad del aluminio <span class="math inline">\rho_\text{Al}=2{,}7\,\mathrm{g/cm^3}</span>; densidad del hierro <span class="math inline">\rho_\text{Fe}=7{,}9\,\mathrm{g/cm^3}</span>; densidad del agua <span class="math inline">\rho_\text{agua}=1{,}0\,\mathrm{g/cm^3}</span>.)</p>
+<h3 id="p5" class="anchored">Problema 5 · Una red de resistencias</h3>
+<p><span class="pts">15 puntos</span></p>
+<p>Consideremos el circuito eléctrico de la figura 5. Calcular la caída de voltaje entre los puntos <span class="math inline">a</span> y <span class="math inline">b</span> y la corriente en la rama indicada (15 puntos).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img src="figuras/fig5.png" class="img-fluid" style="width:50.0%"></p>
+<figcaption>Figura 5. Circuito eléctrico con varias resistencias y una fuente de voltaje. Se pide calcular la diferencia de potencial o voltaje entre los puntos <span class="math inline">a</span> y <span class="math inline">b</span> y la corriente que pasa por la rama con la resistencia <span class="math inline">R_5</span>.</figcaption>
+</figure>
+</div>
+</section>
+
+
+<!-- Closes the reading column opened by _gen/docs-nav.html, adds the right
+     "On this page" list, and wires: current-page marking in the left nav,
+     breadcrumbs, the page TOC (from h2/h3 in the reading column) and a
+     scroll-spy. Pure DOM, no library. -->
+  </div>
+  <aside class="docs-toc"><button class="docs-fold" type="button" data-fold="toc" aria-label="Hide the page outline" title="Hide the page outline">›</button><div class="t">On this page</div><ol></ol></aside>
+</div>
+<script>
+(function () {
+  /* 0. The two side panels fold on their chevrons; the choice is remembered in this browser. */
+  var docs = document.querySelector('.docs');
+  if (docs) {
+    var store = {};
+    try { store = JSON.parse(localStorage.getItem('docs-fold') || '{}'); } catch (e) { store = {}; }
+    function apply() {
+      docs.classList.toggle('nav-folded', !!store.nav);
+      docs.classList.toggle('toc-folded', !!store.toc);
+      document.querySelectorAll('.docs-fold').forEach(function (b) {
+        var which = b.getAttribute('data-fold'), folded = !!store[which];
+        b.innerHTML = (which === 'nav') === folded ? '&rsaquo;' : '&lsaquo;';
+        var what = which === 'nav' ? 'the navigation' : 'the page outline';
+        b.title = (folded ? 'Show ' : 'Hide ') + what; b.setAttribute('aria-label', b.title);
+      });
+    }
+    document.querySelectorAll('.docs-fold').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var which = b.getAttribute('data-fold'); store[which] = !store[which];
+        try { localStorage.setItem('docs-fold', JSON.stringify(store)); } catch (e) {}
+        apply();
+      });
+    });
+    apply();
+  }
+  /* 0b. The header ribbon: mark the entry whose section holds this page. Quarto rewrites the hrefs to
+     relative paths, so folders are read from the resolved URLs; the Overview link gives the site root. */
+  (function () {
+    var links = Array.prototype.slice.call(document.querySelectorAll('.site-nav a'));
+    if (!links.length) return;
+    /* a served URL may end in '/' (GitHub Pages: …/about/); read it as …/about/index.html */
+    function folder(path) { if (/\/$/.test(path)) path += 'index.html'; var s = path.split('/').filter(Boolean); return s.length > 1 ? s[s.length - 2] : ''; }
+    var wm = document.querySelector('a.wordmark');            // the wordmark links to the site root
+    var root = folder((wm || links[0]).pathname);
+    var map = { rietveld: 'cases', drude: 'cases', dielectric: 'cases' };
+    function key(path) { var f = folder(path); if (f === root) return 'overview'; return map[f] || f; }
+    var here = key(location.pathname);
+    links.forEach(function (a) { a.classList.toggle('current', key(a.pathname) === here); });
+  })();
+
+  var main = document.querySelector('.docs-main');
+  var nav = document.querySelector('.docs-nav');
+  var toc = document.querySelector('.docs-toc ol');
+  if (!main || !nav || !toc) return;
+
+  /* 1. Left nav: mark the current page (and section, if the hash matches). */
+  var here = location.pathname.replace(/\/index\.html$/, '/');
+  var links = Array.prototype.slice.call(nav.querySelectorAll('a'));
+  var pageLink = null, hashLink = null;
+  links.forEach(function (a) {
+    var p = a.pathname.replace(/\/index\.html$/, '/');
+    if (p !== here) return;
+    if (!a.hash && !pageLink) pageLink = a;
+    if (a.hash && a.hash === location.hash) hashLink = a;
+  });
+  var cur = hashLink || pageLink;
+  if (cur) {
+    cur.classList.add('current');
+    var det = cur.closest('details.group');
+    if (det) { det.open = true; det.classList.add('has-current'); }
+    /* Breadcrumbs: group title › page (› section). */
+    var crumbs = document.createElement('div');
+    crumbs.className = 'docs-crumbs';
+    var g = det ? det.querySelector('summary.t') : null;
+    var parts = [];
+    function push(t) { if (t && parts[parts.length - 1] !== t) parts.push(t); }
+    if (g) push(g.textContent.trim());
+    if (pageLink && pageLink !== cur) push(pageLink.textContent.trim());
+    push(cur.textContent.trim());
+    crumbs.innerHTML = parts.map(function (t, i) {
+      return (i ? '<span class="sep">›</span>' : '') + '<span>' + t.replace(/</g, '&lt;') + '</span>';
+    }).join('');
+    main.insertBefore(crumbs, main.firstChild);
+  }
+
+  /* 2. Right "On this page": h2 and h3 of the reading column. */
+  var used = {};
+  var heads = Array.prototype.slice.call(main.querySelectorAll('h2, h3')).filter(function (h) {
+    if (h.closest('.site-foot, .featured-band, .msg-grid, [data-toc="no"]')) return false;
+    if (h.classList.contains('unnumbered') || h.id === 'contenido') return false;
+    return h.textContent.trim().length > 0;
+  });
+  heads.forEach(function (h) {
+    if (!h.id) {
+      var s = h.textContent.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
+        .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 60) || 'sec';
+      while (used[s] || document.getElementById(s)) s += '-';
+      h.id = s;
+    }
+    used[h.id] = true;
+    var li = document.createElement('li');
+    if (h.tagName === 'H3') li.className = 'l3';
+    var a = document.createElement('a');
+    a.href = '#' + h.id;
+    /* This runs before KaTeX has rendered the headings, so a heading with mathematics still holds TeX
+       source: copy its markup, including the math spans, and let the page's KaTeX pass render the copy. */
+    var copy = h.cloneNode(true);
+    copy.querySelectorAll('.katex-mathml, annotation, .anchorjs-link').forEach(function (n) { n.remove(); });
+    var label = copy.textContent.trim().replace(/\s+/g, ' ');
+    if (copy.querySelector('.math, .math-done, .katex')) a.innerHTML = copy.innerHTML.trim();
+    else a.textContent = label.length > 72 ? label.slice(0, 70).replace(/[\s,;:]+\S*$/, '') + '…' : label;
+    a.title = label;
+    li.appendChild(a);
+    toc.appendChild(li);
+  });
+  if (!heads.length) { document.querySelector('.docs-toc').hidden = true; return; }
+
+  /* 3. Scroll-spy. */
+  var items = Array.prototype.slice.call(toc.querySelectorAll('a'));
+  function spy() {
+    var y = window.scrollY + 120, best = null;
+    heads.forEach(function (h) { if (h.getBoundingClientRect().top + window.scrollY <= y) best = h; });
+    items.forEach(function (a) { a.classList.toggle('current', best && a.getAttribute('href') === '#' + best.id); });
+  }
+  window.addEventListener('scroll', spy, { passive: true });
+  window.addEventListener('hashchange', spy);
+  spy();
+})();
+</script>
+<footer class="site-foot">
+  <div class="site-foot__inner">
+    <div class="foot-grid">
+      <div class="foot-about">
+        <h4 class="anchored">Qué es esto</h4>
+        <p>El archivo de la fase local del País Vasco de la Olimpiada de Física: todas las ediciones desde 2012, con sus pruebas teóricas y experimentales, en castellano y euskera. Organiza la Sección Local del País Vasco de la Real Sociedad Española de Física con la UPV/EHU.</p>
+        <div class="cite-block">Josu M. Igartua · Departamento de Física, Facultad de Ciencia y Tecnología, UPV/EHU<br>josu.igartua@ehu.eus</div>
+      </div>
+      <div><h4 class="anchored">Este sitio</h4><ul>
+        <li><a href="../../../index.html">Inicio</a></li><li><a href="../../../ediciones/index.html">Ediciones</a></li><li><a href="../../../problemas/index.html">Problemas</a></li><li><a href="../../../olimpiada/index.html">La olimpiada</a></li><li><a href="../../../historia/index.html">Historia</a></li><li><a href="../../../contacto/index.html">Contacto</a></li></ul></div>
+      <div><h4 class="anchored">Instituciones</h4><ul>
+        <li><a href="https://rsef.es">Real Sociedad Española de Física</a></li>
+        <li><a href="https://www.ehu.eus">UPV/EHU</a></li>
+        <li><a href="https://www.ipho-new.org">IPhO</a></li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Josu M. Igartua · los enunciados, de sus autores y de la RSEF</span>
+      <span>Quarto · family design kit</span>
+    </div>
+  </div>
+</footer>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+    tabsets.forEach(function(tabset) {
+      const tabby = new Tabby('#' + tabset.id);
+    });
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'light-border',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+
+
+
+
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

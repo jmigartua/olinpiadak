@@ -1,0 +1,158 @@
+/* Olinpiadak — rules of this project only; theme.css and site.css are the family kit, copied unchanged (L002).
+   Identity: petrol teal #0b6e72 as the primary (the kit names its primary token --teal for history; this is the
+   first project where it is one) and medal gold #a5780f as the accent. No other kit project uses either. */
+:root {
+  --teal: #0b6e72; --teal-soft: #2a8d90; --amber: #a5780f;
+  --ok: #2e6b4e; --warn: #8a6a00; --bad: #9a3f3f;
+  --gold-tint: #fbf6e9;
+  --fl-teorica: #0b6e72; --fl-experimental: #a5780f; --fl-heredada: #6b6f76;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --teal: #5fc3c6; --teal-soft: #8fd6d8; --amber: #e2b84a;
+    --ok: #7fc4a3; --warn: #e3c15a; --bad: #e08a8a;
+    --gold-tint: #2a2414;
+    --fl-teorica: #5fc3c6; --fl-experimental: #e2b84a; --fl-heredada: #a3a8b0;
+  }
+}
+
+/* Shown only in the public sibling (tools/sibling.py unwraps it there). */
+.sibling-only { display: none !important; }
+
+/* Labels, ids, chips. */
+.lbl { display: block; font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint); margin: 0 0 3px; }
+.pid { font-family: var(--mono); font-size: 12px; color: var(--teal); letter-spacing: 0.04em; }
+.whose { font-size: 13px; color: var(--ink-soft); font-style: italic; }
+.chip { display: inline-block; font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; padding: 1px 7px; border-radius: 2px; border: 1px solid currentColor; line-height: 1.6; white-space: nowrap; }
+a.chip:hover { text-decoration: none; background: var(--tint); }
+.chip-teorica { color: var(--fl-teorica); } .chip-experimental { color: var(--fl-experimental); } .chip-heredada { color: var(--fl-heredada); }
+.chip-sol { color: var(--ok); } .chip-missing { color: var(--bad); border-style: dashed; } .chip-lang { color: var(--ink-soft); }
+.chip-pdf { color: var(--ink-faint); } .chip-web { color: var(--teal); }
+
+/* Verbatim texts: the brief. */
+.verbatim { border-left: 3px solid var(--teal); background: var(--tint); padding: 12px 18px; margin: 14px 0 22px; font-family: var(--serif); font-size: 15.5px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.verbatim .who { display: block; font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 6px; white-space: normal; }
+
+/* The editions matrix: years down, the two tests across. */
+.matrix-wrap { overflow-x: auto; }
+.matrix { width: 100%; font-size: 14.5px; font-variant-numeric: tabular-nums; }
+.matrix th:first-child, .matrix td:first-child { width: 64px; }
+.matrix td.y { font-family: var(--mono); font-size: 15px; font-weight: 500; }
+.matrix td.y a { color: var(--teal); }
+.matrix tr.era td { padding-top: 18px; font-family: var(--sans); font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint); border-bottom: 0; }
+.matrix .t { font-family: var(--serif); font-weight: 600; }
+.matrix .s { display: block; font-size: 13px; color: var(--ink-soft); }
+.matrix .none { color: var(--ink-faint); font-style: italic; font-size: 13.5px; }
+.matrix td .chip { margin: 2px 4px 2px 0; }
+
+/* Page heads: an edition, a test. */
+.itin-head { border-top: 3px solid var(--teal); padding-top: 10px; margin: 0 0 18px; }
+.itin-head.experimental { border-top-color: var(--amber); }
+.itin-head .kicker { font-family: var(--sans); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint); }
+.itin-head h1 { font-size: clamp(26px, 3.4vw, 34px); margin: 2px 0 6px; line-height: 1.2; text-wrap: balance; }
+.itin-head .lead { font-size: 16px; color: var(--ink-soft); max-width: 68ch; }
+.itin-head .links { font-size: 14px; margin: 8px 0 0; }
+.itin-group { margin: 26px 0 8px; font-family: var(--sans); font-size: 12.5px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: var(--teal); }
+.test-meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px 24px; border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); padding: 12px 0; margin: 14px 0 22px; font-size: 14px; }
+.test-meta .v { color: var(--ink); }
+
+/* The documents of a test: role down, language across. */
+.docs-table { width: 100%; font-size: 14.5px; margin: 6px 0 22px; }
+.docs-table th { font-family: var(--sans); font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint); text-align: left; }
+.docs-table td.r { font-family: var(--serif); font-weight: 600; width: 40%; }
+.docs-table td .m { font-family: var(--mono); font-size: 12px; color: var(--ink-faint); margin-left: 6px; }
+
+/* The problems of a test, and the problem bank. */
+.probs { list-style: none; padding: 0; margin: 4px 0 22px; }
+.probs li { border-bottom: 1px solid var(--line-soft); padding: 9px 0; }
+.probs .k { font-family: var(--mono); font-size: 12px; color: var(--teal); margin-right: 8px; }
+.probs .t { font-family: var(--serif); font-weight: 600; }
+.probs .eu { color: var(--ink-soft); font-style: italic; font-size: 14px; margin-left: 6px; }
+.probs .s { display: block; font-size: 14px; color: var(--ink-soft); margin-top: 2px; }
+.probs .tags { display: block; margin-top: 4px; }
+.probs .pts { font-family: var(--mono); font-size: 12px; color: var(--ink-faint); margin-left: 8px; }
+.topic-chip { display: inline-block; font-family: var(--sans); font-size: 12px; color: var(--ink-soft); border: 1px solid var(--line); padding: 0 7px; margin: 2px 4px 2px 0; border-radius: 10px; }
+a.topic-chip:hover { border-color: var(--teal); color: var(--teal); text-decoration: none; }
+.topic-index { columns: 2 260px; margin: 8px 0 24px; padding: 0; list-style: none; }
+.topic-index li { break-inside: avoid; padding: 3px 0; font-size: 15px; }
+.topic-index .n { font-family: var(--mono); font-size: 12px; color: var(--ink-faint); margin-left: 6px; }
+
+/* Cards: editions on the home, tests on an edition page. */
+.pcards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+.pcard { border: 1px solid var(--line-soft); padding: 14px 16px 12px; display: flex; flex-direction: column; gap: 6px; background: var(--paper); color: inherit; text-decoration: none; }
+a.pcard:hover { border-color: var(--teal); text-decoration: none; }
+.pcard.experimental { border-top: 3px solid var(--amber); } .pcard.teorica { border-top: 3px solid var(--teal); } .pcard.heredada { border-top: 3px solid var(--fl-heredada); }
+.pcard .num { font-family: var(--mono); font-size: 12px; color: var(--ink-faint); }
+.pcard h3 { font-family: var(--serif); font-size: 17px; margin: 0; line-height: 1.3; }
+.pcard p { font-size: 14px; color: var(--ink-soft); margin: 0; flex: 1; }
+.pcard .links { font-family: var(--sans); font-size: 13.5px; display: flex; gap: 8px; flex-wrap: wrap; margin-top: 4px; align-items: center; }
+
+/* The timeline of organisers (Historia). */
+.timeline { list-style: none; padding: 0; margin: 10px 0 24px; border-left: 2px solid var(--line); }
+.timeline li { position: relative; padding: 6px 0 12px 20px; }
+.timeline li::before { content: ""; position: absolute; left: -6px; top: 13px; width: 10px; height: 10px; border-radius: 50%; background: var(--teal); }
+.timeline li.heredada::before { background: var(--fl-heredada); }
+.timeline .y { font-family: var(--mono); font-size: 13px; color: var(--ink-faint); margin-right: 8px; }
+.timeline .who { font-family: var(--serif); font-weight: 600; }
+.timeline .s { display: block; font-size: 14px; color: var(--ink-soft); }
+
+/* The embedded statement. */
+.pdf-frame { width: 100%; height: 78vh; min-height: 520px; border: 1px solid var(--line-soft); background: var(--tint); margin: 6px 0 22px; }
+@media (max-width: 760px) { .pdf-frame { display: none; } }
+
+/* Notes for the workshop, and gaps. */
+.workshop-note { border: 1px dashed var(--amber); background: var(--gold-tint); padding: 10px 14px 4px; margin: 0 0 18px; font-size: 14.5px; }
+.workshop-note p, .workshop-note ul, .workshop-note ol { margin: 0 0 8px; }
+.workshop-note .lbl { color: var(--amber); }
+.gap { color: var(--bad); }
+
+/* A test's own text (the web edition of the statement) inside the docs layout. */
+.docs-main .columns { display: flex; gap: 20px; flex-wrap: wrap; align-items: flex-start; }
+.docs-main .column { min-width: 0; }
+.docs-main figure img, .docs-main p img, .docs-main .quarto-figure img { max-width: 100%; height: auto; }
+.docs-main table { display: block; width: max-content; max-width: 100%; overflow-x: auto; }
+.docs-main table.matrix, .docs-main table.docs-table { display: table; width: 100%; }
+.page-article code, .docs-main code, .files li, .docs-main a, .docs-main p, .docs-main li { overflow-wrap: anywhere; }
+.docs-main p:has(.katex), .docs-main li:has(.katex) { overflow-x: auto; }
+.docs-main .cell-output-display { overflow-x: auto; }
+.statement h2 { border-top: 1px solid var(--line); padding-top: 14px; }
+.statement .pts { font-family: var(--mono); font-size: 12.5px; color: var(--ink-faint); }
+
+.prac-prevnext { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-family: var(--sans); font-size: 14px; margin: 0 0 18px; }
+.prac-prevnext a { color: var(--ink-soft); } .prac-prevnext a:hover { color: var(--teal); }
+
+/* Decisions and ideas. */
+.dec { border: 1px solid var(--line-soft); border-left: 4px solid var(--amber); padding: 12px 18px 8px; margin: 16px 0; background: var(--paper); scroll-margin-top: calc(var(--head-h, 92px) + 12px); }
+.dec-head { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.dec h3 { margin: 6px 0 8px; font-size: 18px; line-height: 1.3; }
+.dec p, .dec ul { margin: 0 0 8px; font-size: 15px; }
+.dec-ans { background: var(--tint); border-left: 3px solid var(--ok); padding: 8px 12px 2px; margin: 8px 0; }
+.status { font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; padding: 1px 7px; border: 1px solid currentColor; border-radius: 2px; }
+.status-open { color: var(--amber); } .status-answered { color: var(--ok); }
+.idea { border-left: 3px solid var(--teal); padding: 4px 16px 2px; margin: 14px 0; }
+.idea h3 { margin: 0 0 6px; font-size: 17px; }
+.idea p, .idea ul { font-size: 15px; margin: 0 0 8px; }
+.status-proposed { color: var(--warn); } .status-built, .status-accepted { color: var(--ok); } .status-set-aside { color: var(--ink-faint); }
+
+/* Roadmap. */
+.phase { border-top: 1px solid var(--line); padding: 10px 0 4px; }
+.phase h3 { margin: 0 0 6px; }
+.phase .state { font-family: var(--mono); font-size: 12px; color: var(--ink-faint); margin-left: 8px; }
+
+/* The sources ledger. */
+.files { list-style: none; padding: 0; } .files li { padding: 6px 0; border-bottom: 1px solid var(--line-soft); font-size: 15px; }
+.files .m { font-family: var(--mono); font-size: 12.5px; color: var(--ink-faint); margin-left: 8px; }
+.ledger { width: 100%; font-size: 13px; }
+.ledger td { vertical-align: top; overflow-wrap: anywhere; }
+.ledger td.f { font-family: var(--mono); font-size: 12px; }
+.fate-archive { color: var(--ok); } .fate-originals { color: var(--teal); } .fate-private { color: var(--amber); } .fate-duplicate, .fate-dropped { color: var(--ink-faint); }
+
+/* Phones (thermomat L009): the kit's site.css keeps the left navigation sticky at every width. */
+@media (max-width: 760px) {
+  .docs-main { overflow-x: hidden; min-width: 0; }
+  .docs-nav { position: static; top: auto; max-height: none; overflow: visible; }
+  .docs-nav .docs-fold, .docs-toc .docs-fold { display: none; }
+  .docs.nav-folded, .docs.toc-folded, .docs.nav-folded.toc-folded, .docs.docs-wide.nav-folded { grid-template-columns: 1fr; }
+  .docs.nav-folded .docs-nav > :not(.docs-fold) { display: block; }
+  .docs-main .columns { flex-direction: column; } .docs-main .column { width: 100% !important; }
+}

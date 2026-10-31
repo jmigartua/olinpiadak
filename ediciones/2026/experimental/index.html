@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Prueba experimental 2026 · Olinpiadak – Olimpiada de Física · Fase local del País Vasco</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<link href="../../../assets/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-html-afe927e19676d0e50b1726048be49fb1.min.css" rel="stylesheet" append-hash="true" data-mode="light">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<style>html{ scroll-behavior: smooth; }</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<!-- KaTeX auto-render: publication titles carry TeX inside generated HTML that
+     Quarto's own math pipeline never sees (same approach as thermomat). -->
+<script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script>
+/* The header ribbon is sticky; the side columns and anchor targets need its height. */
+(function () {
+  function headH() {
+    var t = document.querySelector(".topline"), h = document.querySelector(".site-head");
+    var px = (t ? t.offsetHeight : 0) + (h ? h.offsetHeight : 0);
+    if (px) document.documentElement.style.setProperty("--head-h", px + "px");
+  }
+  document.addEventListener("DOMContentLoaded", headH);
+  window.addEventListener("load", headH);
+  window.addEventListener("resize", headH);
+})();
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.renderMathInElement) {
+    renderMathInElement(document.body, {
+      delimiters: [{ left: "$$", right: "$$", display: true }, { left: "$", right: "$", display: false }, { left: "\\(", right: "\\)", display: false }],
+      throwOnError: false
+    });
+  }
+  /* Quarto's KaTeX pipeline writes <span class="math inline">TeX</span> without delimiters and renders
+     them in a loop that reads firstChild.data; that loop dies at the first span the auto-render above
+     has already turned into KaTeX markup, leaving every later formula raw. Render the rest here. */
+  if (window.katex) {
+    document.querySelectorAll(".math").forEach(function (el) {
+      if (!el.querySelector(".katex")) {
+        var t = el.textContent.replace(/^\s*\\[\(\[]/, "").replace(/\\[\)\]]\s*$/, "");
+        try { katex.render(t, el, { displayMode: el.classList.contains("display"), throwOnError: false }); } catch (e) {}
+      }
+      /* Quarto's loop would still visit this span and wipe it (firstChild is now an element, not text):
+         take it out of its sight. No stylesheet of the site depends on the class; KaTeX's own output carries the layout. */
+      el.classList.remove("math"); el.classList.add("math-done");
+    });
+  }
+});
+</script>
+
+  <script defer="" src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../assets/styles/theme.css">
+<link rel="stylesheet" href="../../../assets/styles/site.css">
+<link rel="stylesheet" href="../../../assets/styles/project.css">
+</head>
+
+<body>
+
+<div class="topline"></div>
+<header class="site-head">
+  <div class="site-head__inner">
+    <a href="../../../index.html" class="wordmark">Olimpiada de Física <span class="accent">Euskadi</span>
+      <span class="wordmark-sub">fase local del País Vasco · Facultad de Ciencia y Tecnología, UPV/EHU · todas las ediciones desde 2012</span>
+    </a>
+    <nav class="site-nav">
+      <a href="../../../index.html">Inicio</a>
+      <a href="../../../ediciones/index.html">Ediciones</a>
+      <a href="../../../problemas/index.html">Problemas</a>
+      <a href="../../../olimpiada/index.html">La olimpiada</a>
+      <a href="../../../historia/index.html">Historia</a>
+      <a href="../../../contacto/index.html">Contacto</a>
+    </nav>
+  </div>
+</header>
+<!-- generated by tools/sibling.py public: the left navigation -->
+<div class="docs">
+<nav class="docs-nav" aria-label="Site sections">
+<button class="docs-fold" type="button" data-fold="nav" aria-label="Hide the navigation" title="Hide the navigation">‹</button>
+<details class="group" open=""><summary class="t">Inicio</summary><ul><li><a href="../../../index.html">Inicio</a></li></ul></details>
+<details class="group" open=""><summary class="t">Ediciones</summary><ul><li><a href="../../../ediciones/index.html">Todas las ediciones</a></li><li><a href="../../../ediciones/2026/index.html">2026 · XXXVII</a></li><li><a href="../../../ediciones/2025/index.html">2025 · XXXVI</a></li><li><a href="../../../ediciones/2024/index.html">2024 · XXXV</a></li><li><a href="../../../ediciones/2023/index.html">2023 · XXXIV</a></li><li><a href="../../../ediciones/2022/index.html">2022 · XXXIII</a></li><li><a href="../../../ediciones/2021/index.html">2021 · XXXII</a></li><li><a href="../../../ediciones/2020/index.html">2020 · XXXI</a></li><li><a href="../../../ediciones/2019/index.html">2019 · XXX</a></li><li><a href="../../../ediciones/2018/index.html">2018 · XXIX</a></li><li><a href="../../../ediciones/2017/index.html">2017 · XXVIII</a></li><li><a href="../../../ediciones/2016/index.html">2016 · XXVII</a></li><li><a href="../../../ediciones/2015/index.html">2015 · XXVI</a></li><li><a href="../../../ediciones/2014/index.html">2014 · XXV</a></li><li><a href="../../../ediciones/2013/index.html">2013 · XXIV</a></li><li><a href="../../../ediciones/2012/index.html">2012 · XXIII</a></li></ul></details>
+<details class="group" open=""><summary class="t">Problemas</summary><ul><li><a href="../../../problemas/index.html">El banco de problemas</a></li></ul></details>
+<details class="group" open=""><summary class="t">La olimpiada</summary><ul><li><a href="../../../olimpiada/index.html">Qué es y cómo funciona</a></li><li><a href="../../../olimpiada/preparacion.html">Cómo prepararla</a></li></ul></details>
+<details class="group" open=""><summary class="t">Historia</summary><ul><li><a href="../../../historia/index.html">Quince años de fase local</a></li></ul></details>
+<details class="group" open=""><summary class="t">Contacto</summary><ul><li><a href="../../../contacto/index.html">Contacto</a></li></ul></details>
+</nav>
+<div class="docs-main">
+
+<header id="title-block-header">
+<h1 class="title">Prueba experimental de 2026</h1>
+
+</header>
+
+
+<div class="page-article"><div class="itin-head experimental"><span class="kicker">Edición XXXVII · 2026 · Prueba experimental</span><h1>Prueba experimental de 2026</h1><p class="lead">La dinámica de un muelle que gira y se suelta: con datos de vídeo de alta velocidad, el tiempo que tarda la señal en recorrer el muelle, el estiramiento cuasiestático (R = R* + Sω²), el arrastre y la caída, y el argumento dimensional t ∼ √(M/K). En castellano, euskera e inglés, con solución completa en las tres lenguas.</p></div><nav class="prac-prevnext"><a href="../../2026/teorica/index.html">← 2026 teórica</a><a href="../index.html">Edición 2026</a><span></span></nav><div class="test-meta"><div><span class="lbl">Fecha</span><span class="v">20 de febrero de 2026</span></div><div><span class="lbl">Lugar</span><span class="v">Facultad de Ciencia y Tecnología, Leioa</span></div><div><span class="lbl">Formato</span><span class="v">análisis de datos (14 ejercicios en 5 partes; rúbrica de 40 + 10 puntos)</span></div><div><span class="lbl">Entrenamiento</span><span class="v">6 de febrero de 2026</span></div><div><span class="lbl">Autoría</span><span class="v">Josu M. Igartua</span></div></div><p class="edition"><span class="lbl">Origen</span>T. Dooling, J. Regester, M. Carnaghi y A. Titus, «The motion of a spring released from uniform circular motion», arXiv:1508.04037 (Am. J. Phys., 2016); los datos son sintéticos.</p><h2 class="anchored">Documentos</h2>
+<table class="docs-table caption-top">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">documento</th>
+<th data-quarto-table-cell-role="th">castellano</th>
+<th data-quarto-table-cell-role="th">euskera</th>
+<th data-quarto-table-cell-role="th">inglés</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="r">Enunciado</td>
+<td><span><a href="2026_experimental_enunciado_es.pdf">PDF</a><span class="m">2.1 MB</span></span></td>
+<td><span><a href="2026_experimental_enunciado_eu.pdf">PDF</a><span class="m">2.2 MB</span></span></td>
+<td><span><a href="2026_experimental_enunciado_en.pdf">PDF</a><span class="m">2.1 MB</span></span></td>
+</tr>
+<tr class="even">
+<td class="r">Hoja de respuestas</td>
+<td><a href="2026_experimental_hoja-respuestas_es.pdf">PDF</a><span class="m">0.7 MB</span></td>
+<td><a href="2026_experimental_hoja-respuestas_eu.pdf">PDF</a><span class="m">0.7 MB</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td class="r">Datos: tabla A1 (CSV)</td>
+<td colspan="3"><a href="2026_experimental_datos-A1.csv">CSV</a></td>
+</tr>
+<tr class="even">
+<td class="r">Datos: tabla B1 (CSV)</td>
+<td colspan="3"><a href="2026_experimental_datos-B1.csv">CSV</a></td>
+</tr>
+</tbody>
+</table>
+<ul class="files"><li><a href="solucion/index.html">Solución (castellano)</a><span class="m">página web</span></li><li><a href="solucion/eu.html">Solución (euskera)</a><span class="m">página web</span></li><li><a href="solucion/en.html">Solución (inglés)</a><span class="m">página web</span></li></ul><h2 class="anchored">La práctica</h2><ol class="probs"><li id="2026-E-X1"><span class="k">Práctica</span><span class="t">Dinámica de un muelle giratorio</span><span class="eu">Malguki birakariaren dinamika</span><span class="pts">50 puntos</span><span class="s">Un muelle que gira se suelta: cinemática y tiempo de colapso, equilibrio cuasiestático, arrastre y caída, propagación de la señal y argumento dimensional, con datos sintéticos de vídeo rápido (14 ejercicios).</span><span class="tags"><a class="topic-chip" href="../../../problemas/index.html#ondas">Ondas y sonido</a><a class="topic-chip" href="../../../problemas/index.html#dinamica">Dinámica y energía</a><a class="topic-chip" href="../../../problemas/index.html#datos">Tratamiento de datos y medida</a></span></li></ol></div>
+<section id="enunciado" class="statement">
+<h2 class="anchored">El enunciado</h2>
+<h3 id="x1" class="anchored">Práctica de laboratorio · Dinámica de un muelle giratorio</h3>
+<h4 id="objetivo" class="anchored">Objetivo</h4>
+<p>El objetivo de este experimento es estudiar la dinámica de un muelle giratorio. Específicamente, analizar su extensión radial bajo rotación, determinando los parámetros elástico-inerciales efectivos, y medir el «tiempo de colapso» del muelle tras su liberación, interpretándolo en términos de propagación de ondas.</p>
+<h4 id="material" class="anchored">Material</h4>
+<ol type="1">
+<li>Sistema de motor giratorio (radio del rotor <span class="math inline">r_0</span>).</li>
+<li>Muelle helicoidal (masa <span class="math inline">M</span>, constante <span class="math inline">K</span>).</li>
+<li>Sistema de cámara de alta velocidad.</li>
+<li>Ordenador con software de seguimiento de vídeo.</li>
+<li>Archivos de datos (Dataset A y Dataset B).</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img src="figuras/fig1.png" class="img-fluid" style="width:60.0%"></p>
+<figcaption>Figura 1. El aparato experimental utilizado para rotar el muelle. Figura de Dooling et al., <a href="https://arxiv.org/abs/1508.04037">arXiv:1508.04037</a>.</figcaption>
+</figure>
+</div>
+<h4 id="fundamento-teórico" class="anchored">Fundamento teórico</h4>
+<p>Un muelle de masa total <span class="math inline">M</span> y constante elástica efectiva <span class="math inline">K</span> está unido por su extremo interior a un rotor de radio <span class="math inline">r_0</span>, y gira a velocidad angular constante <span class="math inline">\omega</span>, en un plano horizontal. El muelle se estira radialmente, y alcanza una configuración estacionaria.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img src="figuras/fig2.png" class="img-fluid" style="width:80.0%"></p>
+<figcaption>Figura 2. Sistema de coordenadas del muelle estirado unido a un rotor giratorio de radio <span class="math inline">r_0</span>. El desplazamiento <span class="math inline">u</span> representa la extensión de un elemento de masa desde su posición de reposo <span class="math inline">x</span>. Figura de Dooling et al., <a href="https://arxiv.org/abs/1508.04037">arXiv:1508.04037</a>.</figcaption>
+</figure>
+</div>
+<p>Idealmente, la extensión del muelle depende de la fuerza centrífuga, que escala con <span class="math inline">\omega^2</span> (ver figura 2). Durante la rotación, la resistencia del aire puede causar que el muelle se retrase respecto a la línea radial un ángulo <span class="math inline">\alpha</span> (ángulo de arrastre), y la gravedad puede causar que se curve hacia abajo un ángulo <span class="math inline">\beta</span> (ángulo de caída).</p>
+<p>En <span class="math inline">t=0</span>, se libera el extremo interior. La información de que el extremo interior está libre viaja hacia el exterior como una onda elástica longitudinal. El tiempo que tarda esta señal en llegar al extremo exterior es el <strong>tiempo de colapso</strong>, <span class="math inline">t_c</span>. Esto crea una forma característica de <em>chevrón</em> durante el colapso.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img src="figuras/fig3.png" class="img-fluid" style="width:50.0%"></p>
+<figcaption>Figura 3a. Visualización de la dinámica del muelle: el ángulo de arrastre <span class="math inline">\alpha</span> antes de la liberación, debido a la resistencia del aire. Figura de Dooling et al., <a href="https://arxiv.org/abs/1508.04037">arXiv:1508.04037</a>.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img src="figuras/fig4.png" class="img-fluid" style="width:50.0%"></p>
+<figcaption>Figura 3b. La forma característica de <em>chevrón</em> que se forma durante el colapso, tras la liberación, a medida que la onda viaja hacia el exterior. Figura de Dooling et al., <a href="https://arxiv.org/abs/1508.04037">arXiv:1508.04037</a>.</figcaption>
+</figure>
+</div>
+<p>Una cámara de alta velocidad registra:</p>
+<ul>
+<li><span class="math inline">\theta_{\text{out}}(t)</span>: posición angular del extremo exterior.</li>
+<li><span class="math inline">\theta_{\text{in}}(t)</span>: posición angular del extremo interior.</li>
+<li><span class="math inline">R_{\text{out}}</span>: distancia radial en estado estacionario.</li>
+</ul>
+<h4 id="procedimiento-experimental" class="anchored">Procedimiento experimental</h4>
+<p><strong>Parte 1: Cinemática y tiempo de colapso (Dataset A)</strong></p>
+<p>Los siguientes datos (tabla A1) corresponden a un evento de liberación a una velocidad nominal <span class="math inline">\omega \approx 16\ \mathrm{rad\,s^{-1}}</span>.</p>
+<table class="caption-top">
+<caption>Tabla A1. Posiciones angulares del seguimiento de vídeo (<a href="2026_experimental_datos-A1.csv">CSV</a>).</caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">t</span> (s)</th>
+<th style="text-align: center;"><span class="math inline">\theta_{\text{out}}</span> (rad)</th>
+<th style="text-align: center;"><span class="math inline">\sigma_{\theta,\text{out}}</span> (rad)</th>
+<th style="text-align: center;"><span class="math inline">\theta_{\text{in}}</span> (rad)</th>
+<th style="text-align: center;"><span class="math inline">\sigma_{\theta,\text{in}}</span> (rad)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0.00</td>
+<td style="text-align: center;">0.143</td>
+<td style="text-align: center;">0.10</td>
+<td style="text-align: center;">0.005</td>
+<td style="text-align: center;">0.12</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0.05</td>
+<td style="text-align: center;">0.835</td>
+<td style="text-align: center;">0.10</td>
+<td style="text-align: center;">0.487</td>
+<td style="text-align: center;">0.12</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">0.10</td>
+<td style="text-align: center;">1.608</td>
+<td style="text-align: center;">0.10</td>
+<td style="text-align: center;">0.641</td>
+<td style="text-align: center;">0.12</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0.15</td>
+<td style="text-align: center;">2.251</td>
+<td style="text-align: center;">0.10</td>
+<td style="text-align: center;">0.533</td>
+<td style="text-align: center;">0.12</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">0.20</td>
+<td style="text-align: center;">3.178</td>
+<td style="text-align: center;">0.10</td>
+<td style="text-align: center;">0.703</td>
+<td style="text-align: center;">0.12</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0.25</td>
+<td style="text-align: center;">3.972</td>
+<td style="text-align: center;">0.10</td>
+<td style="text-align: center;">0.388</td>
+<td style="text-align: center;">0.12</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">0.30</td>
+<td style="text-align: center;">4.793</td>
+<td style="text-align: center;">0.10</td>
+<td style="text-align: center;">0.276</td>
+<td style="text-align: center;">0.12</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0.35</td>
+<td style="text-align: center;">5.550</td>
+<td style="text-align: center;">0.10</td>
+<td style="text-align: center;">0.282</td>
+<td style="text-align: center;">0.12</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">0.40</td>
+<td style="text-align: center;">6.396</td>
+<td style="text-align: center;">0.10</td>
+<td style="text-align: center;">0.377</td>
+<td style="text-align: center;">0.12</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0.45</td>
+<td style="text-align: center;">7.034</td>
+<td style="text-align: center;">0.10</td>
+<td style="text-align: center;">0.193</td>
+<td style="text-align: center;">0.12</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">0.50</td>
+<td style="text-align: center;">7.447</td>
+<td style="text-align: center;">0.10</td>
+<td style="text-align: center;">0.022</td>
+<td style="text-align: center;">0.12</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0.55</td>
+<td style="text-align: center;">8.103</td>
+<td style="text-align: center;">0.10</td>
+<td style="text-align: center;">0.019</td>
+<td style="text-align: center;">0.12</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">0.60</td>
+<td style="text-align: center;">8.583</td>
+<td style="text-align: center;">0.10</td>
+<td style="text-align: center;">0.127</td>
+<td style="text-align: center;">0.12</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0.65</td>
+<td style="text-align: center;">9.129</td>
+<td style="text-align: center;">0.10</td>
+<td style="text-align: center;">0.030</td>
+<td style="text-align: center;">0.12</td>
+</tr>
+</tbody>
+</table>
+<ol type="1">
+<li>Realiza un gráfico de <span class="math inline">\theta_{\text{out}}(t)</span> y <span class="math inline">\theta_{\text{in}}(t)</span> frente a <span class="math inline">t</span>. Representa, también, los residuos de la posición del extremo exterior frente al tiempo (restando el ajuste lineal de los tiempos iniciales).</li>
+<li>Usando la tabla A1 para <span class="math inline">t\le 0.40\ \mathrm{s}</span>, realiza una regresión lineal <span class="math inline">\theta_{\text{out}}(t)=\theta_0+\omega t</span>. Deduce la velocidad angular <span class="math inline">\omega</span> y su incertidumbre.</li>
+<li>Usando la tabla A1 para <span class="math inline">t\ge 0.50\ \mathrm{s}</span>, ajusta una segunda línea <span class="math inline">\theta_{\text{out}}(t)=\theta_1+\omega_2 t</span>. Explica físicamente por qué <span class="math inline">\omega_2 &lt; \omega</span>.</li>
+<li>Determina el tiempo de colapso <span class="math inline">t_c</span> como la intersección de las dos líneas ajustadas. Interpreta este tiempo en términos de propagación de señales (ver figura 3b).</li>
+<li>Analiza el gráfico de <span class="math inline">\theta_{\text{in}}(t)</span>, y explica la rápida desviación de la rotación uniforme tras la liberación.</li>
+</ol>
+<p><strong>Parte 2: Equilibrio cuasiestático (Dataset B)</strong></p>
+<p>La tabla B1 presenta medidas en <em>estado estacionario</em> para diferentes velocidades angulares.</p>
+<table class="caption-top">
+<caption>Tabla B1. Cantidades en <em>estado estacionario</em> y <em>tiempo de colapso</em> (<a href="2026_experimental_datos-B1.csv">CSV</a>).</caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\omega</span> (rad/s)</th>
+<th style="text-align: center;"><span class="math inline">R_{\text{out}}</span> (m)</th>
+<th style="text-align: center;"><span class="math inline">\sigma_R</span> (m)</th>
+<th style="text-align: center;"><span class="math inline">\alpha</span> (°)</th>
+<th style="text-align: center;"><span class="math inline">\sigma_\alpha</span> (°)</th>
+<th style="text-align: center;"><span class="math inline">\beta</span> (°)</th>
+<th style="text-align: center;"><span class="math inline">\sigma_\beta</span> (°)</th>
+<th style="text-align: center;"><span class="math inline">t_c</span> (s)</th>
+<th style="text-align: center;"><span class="math inline">\sigma_{t_c}</span> (s)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">0.1088</td>
+<td style="text-align: center;">0.002</td>
+<td style="text-align: center;">4.34</td>
+<td style="text-align: center;">0.5</td>
+<td style="text-align: center;">19.52</td>
+<td style="text-align: center;">0.7</td>
+<td style="text-align: center;">0.4287</td>
+<td style="text-align: center;">0.01</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">0.1399</td>
+<td style="text-align: center;">0.002</td>
+<td style="text-align: center;">6.58</td>
+<td style="text-align: center;">0.5</td>
+<td style="text-align: center;">18.14</td>
+<td style="text-align: center;">0.7</td>
+<td style="text-align: center;">0.4321</td>
+<td style="text-align: center;">0.01</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">0.1742</td>
+<td style="text-align: center;">0.002</td>
+<td style="text-align: center;">9.28</td>
+<td style="text-align: center;">0.5</td>
+<td style="text-align: center;">17.79</td>
+<td style="text-align: center;">0.7</td>
+<td style="text-align: center;">0.4221</td>
+<td style="text-align: center;">0.01</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">0.2241</td>
+<td style="text-align: center;">0.002</td>
+<td style="text-align: center;">12.98</td>
+<td style="text-align: center;">0.5</td>
+<td style="text-align: center;">17.81</td>
+<td style="text-align: center;">0.7</td>
+<td style="text-align: center;">0.4273</td>
+<td style="text-align: center;">0.01</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">0.2699</td>
+<td style="text-align: center;">0.002</td>
+<td style="text-align: center;">17.28</td>
+<td style="text-align: center;">0.5</td>
+<td style="text-align: center;">15.95</td>
+<td style="text-align: center;">0.7</td>
+<td style="text-align: center;">0.4281</td>
+<td style="text-align: center;">0.01</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">0.3291</td>
+<td style="text-align: center;">0.002</td>
+<td style="text-align: center;">20.46</td>
+<td style="text-align: center;">0.5</td>
+<td style="text-align: center;">15.71</td>
+<td style="text-align: center;">0.7</td>
+<td style="text-align: center;">0.4249</td>
+<td style="text-align: center;">0.01</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">0.3958</td>
+<td style="text-align: center;">0.002</td>
+<td style="text-align: center;">24.55</td>
+<td style="text-align: center;">0.5</td>
+<td style="text-align: center;">14.47</td>
+<td style="text-align: center;">0.7</td>
+<td style="text-align: center;">0.4205</td>
+<td style="text-align: center;">0.01</td>
+</tr>
+</tbody>
+</table>
+<ol start="6" type="1">
+<li>Representa <span class="math inline">R_{\text{out}}</span> frente a <span class="math inline">\omega^2</span>. Realiza una regresión lineal <span class="math inline">R_{\text{out}} = R_* + S\,\omega^2</span>. Deduce la pendiente <span class="math inline">S</span> y la ordenada en el origen <span class="math inline">R_*</span>, con sus incertidumbres.</li>
+<li>Explica qué determina <span class="math inline">R_*</span> (ordenada en el origen) y <span class="math inline">S</span> (pendiente). Explica por qué la dependencia es con <span class="math inline">\omega^2</span> (refiérete a la figura 2).</li>
+<li>Demuestra que <span class="math inline">S \propto R_*\,M/K</span> (salvo un factor geométrico de orden unidad) y comprueba que ambos miembros tienen dimensiones de <span class="math inline">\mathrm{m\,s^2}</span>. Indica las aproximaciones utilizadas.</li>
+</ol>
+<p><strong>Parte 3: Análisis de arrastre y caída</strong></p>
+<ol start="9" type="1">
+<li>Usando la tabla B1, representa <span class="math inline">\alpha</span> frente a <span class="math inline">\omega</span> y <span class="math inline">\alpha</span> frente a <span class="math inline">\omega^2</span>. Determina qué modelo ajusta mejor (<span class="math inline">\alpha \propto \omega</span> o <span class="math inline">\alpha \propto \omega^2</span>). Explica físicamente por qué se espera un arrastre cuadrático.</li>
+<li>Representa <span class="math inline">\beta</span> frente a <span class="math inline">\omega</span>. Explica por qué <span class="math inline">\beta</span> disminuye a medida que <span class="math inline">\omega</span> aumenta.</li>
+</ol>
+<p><strong>Parte 4: Análisis de propagación de ondas</strong></p>
+<ol start="11" type="1">
+<li>Comprueba si <span class="math inline">t_c</span> en la tabla B1 es constante (independiente de <span class="math inline">\omega</span>). Calcula la media ponderada <span class="math inline">\bar{t}_c</span>.</li>
+<li>Usando análisis dimensional, argumenta que <span class="math inline">t_c \sim \sqrt{M/K}</span>.</li>
+</ol>
+<p><strong>Parte 5: Análisis avanzado</strong></p>
+<ol start="13" type="1">
+<li>Propón un modelo de arrastre refinado (por ejemplo, transición lineal-cuadrática), y predice su efecto en el gráfico de <span class="math inline">\alpha</span> frente a <span class="math inline">\omega</span>.</li>
+<li>Discute cómo cambia el perfil de tensión <span class="math inline">T(x)</span> con la rotación, y si esto podría introducir una débil dependencia de <span class="math inline">t_c</span> con <span class="math inline">\omega</span>.</li>
+</ol>
+</section>
+
+
+<!-- Closes the reading column opened by _gen/docs-nav.html, adds the right
+     "On this page" list, and wires: current-page marking in the left nav,
+     breadcrumbs, the page TOC (from h2/h3 in the reading column) and a
+     scroll-spy. Pure DOM, no library. -->
+  </div>
+  <aside class="docs-toc"><button class="docs-fold" type="button" data-fold="toc" aria-label="Hide the page outline" title="Hide the page outline">›</button><div class="t">On this page</div><ol></ol></aside>
+</div>
+<script>
+(function () {
+  /* 0. The two side panels fold on their chevrons; the choice is remembered in this browser. */
+  var docs = document.querySelector('.docs');
+  if (docs) {
+    var store = {};
+    try { store = JSON.parse(localStorage.getItem('docs-fold') || '{}'); } catch (e) { store = {}; }
+    function apply() {
+      docs.classList.toggle('nav-folded', !!store.nav);
+      docs.classList.toggle('toc-folded', !!store.toc);
+      document.querySelectorAll('.docs-fold').forEach(function (b) {
+        var which = b.getAttribute('data-fold'), folded = !!store[which];
+        b.innerHTML = (which === 'nav') === folded ? '&rsaquo;' : '&lsaquo;';
+        var what = which === 'nav' ? 'the navigation' : 'the page outline';
+        b.title = (folded ? 'Show ' : 'Hide ') + what; b.setAttribute('aria-label', b.title);
+      });
+    }
+    document.querySelectorAll('.docs-fold').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var which = b.getAttribute('data-fold'); store[which] = !store[which];
+        try { localStorage.setItem('docs-fold', JSON.stringify(store)); } catch (e) {}
+        apply();
+      });
+    });
+    apply();
+  }
+  /* 0b. The header ribbon: mark the entry whose section holds this page. Quarto rewrites the hrefs to
+     relative paths, so folders are read from the resolved URLs; the Overview link gives the site root. */
+  (function () {
+    var links = Array.prototype.slice.call(document.querySelectorAll('.site-nav a'));
+    if (!links.length) return;
+    /* a served URL may end in '/' (GitHub Pages: …/about/); read it as …/about/index.html */
+    function folder(path) { if (/\/$/.test(path)) path += 'index.html'; var s = path.split('/').filter(Boolean); return s.length > 1 ? s[s.length - 2] : ''; }
+    var wm = document.querySelector('a.wordmark');            // the wordmark links to the site root
+    var root = folder((wm || links[0]).pathname);
+    var map = { rietveld: 'cases', drude: 'cases', dielectric: 'cases' };
+    function key(path) { var f = folder(path); if (f === root) return 'overview'; return map[f] || f; }
+    var here = key(location.pathname);
+    links.forEach(function (a) { a.classList.toggle('current', key(a.pathname) === here); });
+  })();
+
+  var main = document.querySelector('.docs-main');
+  var nav = document.querySelector('.docs-nav');
+  var toc = document.querySelector('.docs-toc ol');
+  if (!main || !nav || !toc) return;
+
+  /* 1. Left nav: mark the current page (and section, if the hash matches). */
+  var here = location.pathname.replace(/\/index\.html$/, '/');
+  var links = Array.prototype.slice.call(nav.querySelectorAll('a'));
+  var pageLink = null, hashLink = null;
+  links.forEach(function (a) {
+    var p = a.pathname.replace(/\/index\.html$/, '/');
+    if (p !== here) return;
+    if (!a.hash && !pageLink) pageLink = a;
+    if (a.hash && a.hash === location.hash) hashLink = a;
+  });
+  var cur = hashLink || pageLink;
+  if (cur) {
+    cur.classList.add('current');
+    var det = cur.closest('details.group');
+    if (det) { det.open = true; det.classList.add('has-current'); }
+    /* Breadcrumbs: group title › page (› section). */
+    var crumbs = document.createElement('div');
+    crumbs.className = 'docs-crumbs';
+    var g = det ? det.querySelector('summary.t') : null;
+    var parts = [];
+    function push(t) { if (t && parts[parts.length - 1] !== t) parts.push(t); }
+    if (g) push(g.textContent.trim());
+    if (pageLink && pageLink !== cur) push(pageLink.textContent.trim());
+    push(cur.textContent.trim());
+    crumbs.innerHTML = parts.map(function (t, i) {
+      return (i ? '<span class="sep">›</span>' : '') + '<span>' + t.replace(/</g, '&lt;') + '</span>';
+    }).join('');
+    main.insertBefore(crumbs, main.firstChild);
+  }
+
+  /* 2. Right "On this page": h2 and h3 of the reading column. */
+  var used = {};
+  var heads = Array.prototype.slice.call(main.querySelectorAll('h2, h3')).filter(function (h) {
+    if (h.closest('.site-foot, .featured-band, .msg-grid, [data-toc="no"]')) return false;
+    if (h.classList.contains('unnumbered') || h.id === 'contenido') return false;
+    return h.textContent.trim().length > 0;
+  });
+  heads.forEach(function (h) {
+    if (!h.id) {
+      var s = h.textContent.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
+        .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 60) || 'sec';
+      while (used[s] || document.getElementById(s)) s += '-';
+      h.id = s;
+    }
+    used[h.id] = true;
+    var li = document.createElement('li');
+    if (h.tagName === 'H3') li.className = 'l3';
+    var a = document.createElement('a');
+    a.href = '#' + h.id;
+    /* This runs before KaTeX has rendered the headings, so a heading with mathematics still holds TeX
+       source: copy its markup, including the math spans, and let the page's KaTeX pass render the copy. */
+    var copy = h.cloneNode(true);
+    copy.querySelectorAll('.katex-mathml, annotation, .anchorjs-link').forEach(function (n) { n.remove(); });
+    var label = copy.textContent.trim().replace(/\s+/g, ' ');
+    if (copy.querySelector('.math, .math-done, .katex')) a.innerHTML = copy.innerHTML.trim();
+    else a.textContent = label.length > 72 ? label.slice(0, 70).replace(/[\s,;:]+\S*$/, '') + '…' : label;
+    a.title = label;
+    li.appendChild(a);
+    toc.appendChild(li);
+  });
+  if (!heads.length) { document.querySelector('.docs-toc').hidden = true; return; }
+
+  /* 3. Scroll-spy. */
+  var items = Array.prototype.slice.call(toc.querySelectorAll('a'));
+  function spy() {
+    var y = window.scrollY + 120, best = null;
+    heads.forEach(function (h) { if (h.getBoundingClientRect().top + window.scrollY <= y) best = h; });
+    items.forEach(function (a) { a.classList.toggle('current', best && a.getAttribute('href') === '#' + best.id); });
+  }
+  window.addEventListener('scroll', spy, { passive: true });
+  window.addEventListener('hashchange', spy);
+  spy();
+})();
+</script>
+<footer class="site-foot">
+  <div class="site-foot__inner">
+    <div class="foot-grid">
+      <div class="foot-about">
+        <h4 class="anchored">Qué es esto</h4>
+        <p>El archivo de la fase local del País Vasco de la Olimpiada de Física: todas las ediciones desde 2012, con sus pruebas teóricas y experimentales, en castellano y euskera. Organiza la Sección Local del País Vasco de la Real Sociedad Española de Física con la UPV/EHU.</p>
+        <div class="cite-block">Josu M. Igartua · Departamento de Física, Facultad de Ciencia y Tecnología, UPV/EHU<br>josu.igartua@ehu.eus</div>
+      </div>
+      <div><h4 class="anchored">Este sitio</h4><ul>
+        <li><a href="../../../index.html">Inicio</a></li><li><a href="../../../ediciones/index.html">Ediciones</a></li><li><a href="../../../problemas/index.html">Problemas</a></li><li><a href="../../../olimpiada/index.html">La olimpiada</a></li><li><a href="../../../historia/index.html">Historia</a></li><li><a href="../../../contacto/index.html">Contacto</a></li></ul></div>
+      <div><h4 class="anchored">Instituciones</h4><ul>
+        <li><a href="https://rsef.es">Real Sociedad Española de Física</a></li>
+        <li><a href="https://www.ehu.eus">UPV/EHU</a></li>
+        <li><a href="https://www.ipho-new.org">IPhO</a></li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Josu M. Igartua · los enunciados, de sus autores y de la RSEF</span>
+      <span>Quarto · family design kit</span>
+    </div>
+  </div>
+</footer>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+    tabsets.forEach(function(tabset) {
+      const tabby = new Tabby('#' + tabset.id);
+    });
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'light-border',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+
+
+
+
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
